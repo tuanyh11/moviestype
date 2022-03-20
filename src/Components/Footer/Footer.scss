@@ -1,0 +1,18 @@
+@use '../../sass/' as *;
+
+.footer {
+    padding: 4rem 0;
+    &-list {
+        text-transform: capitalize;
+        & .footer-box {
+            & h2 {
+                font-size: 1.2rem;
+            }
+            & li {
+                font-size: 0.8rem;
+                margin: 0.5rem;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,116 @@
+@use "./sass/" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (hover: hover) {
+    a:hover {
+        color: $main-color;
+    }
+}
+
+html {
+    overflow-x: scroll;
+}
+
+body {
+    font-family: $font-family;
+    font-weight: 300;
+    background-color: $body-bg;
+    color: $txt-color;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -font-smoothing: antialiased;
+    @include tablet {
+        font-size: 80%;
+    }
+
+    @include mobile {
+        margin-bottom: 3rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: $box-shadow;
+    background: $txt-color1;
+    border-radius: 0.6rem;
+
+}
+
+button, input {
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $txt-color;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 0 6%;
+}
+
+.grid {
+    @include grid(1);
+}
+
+.btn {
+    padding: 0.5rem, 1rem;
+    border: 0.4rem solid transparent;
+    background-color: $main-color;
+    color: $white;
+    border-radius: $border-radius;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 0 0.7rem 0.8rem #ffff004d;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0.7rem 1.5rem #ffff004d;
+}
+
+.btn-outline {
+    border: 0.3rem solid $white;
+    background-color: transparent;
+    color: $white;
+    box-shadow: unset;
+    transition: color .3s ease, background-color 0.3 ease
+}
+
+.btn-outline:hover {
+    box-shadow: unset;
+    color: $main-color;
+    background-color: $white;
+}
+
+.page {
+     margin-top: $header-height;
+}
+
+.homePage {
+    &-head {
+        padding: 2rem 0;
+    }
+}
+

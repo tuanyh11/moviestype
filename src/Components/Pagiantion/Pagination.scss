@@ -1,0 +1,27 @@
+@use '../../sass/' as *;
+
+.pagination {
+    padding: 3rem 0;
+    display: flex;  
+    justify-content: center;
+    &-item {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 0.1rem solid $white;
+        font-size: 0.8rem;
+    }
+
+    &-item.active {
+        border: 0.1rem solid $main-color;
+        color: $main-color;
+    }
+
+    &-item ~ &-item {
+        margin-left: 1rem;
+    }
+}

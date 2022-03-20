@@ -1,0 +1,22 @@
+@mixin flex($aligin-item, $justify-content){
+    display: flex;
+    align-items: $aligin-item;
+    justify-content: $justify-content;
+    @content
+}
+
+@mixin grid($fr, $gap: 2rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, #{$fr+fr}));
+    grid-gap: $gap;
+}
+
+@mixin bottom( $backgroundColor) {
+    background-color: $backgroundColor;
+    border-radius: 6px;
+    box-shadow: rgb(60 64 67 / 30%) 0 1px 3px 0, rgb(60 64 67 / 15%) 0 4px 8px 3px;
+}
+
+@mixin overlay {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+}

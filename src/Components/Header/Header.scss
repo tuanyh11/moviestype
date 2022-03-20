@@ -1,0 +1,59 @@
+@use'../../sass/' as *;
+
+.header {
+
+    height: $header-height;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    padding: 0 6%;
+    width: 100%;
+    @include flex(center, space-between);
+    &-logo {
+        &  h1 {
+            font-size: 2rem;
+        }
+    }
+
+    &.shrink {
+        height: $header-shrink-height;
+        background-color: $body-bg;
+        box-shadow: $box-shadow;
+    }
+
+
+    &-nav {
+        @include flex(center, space-evenly);
+        &_item {
+           font-size: 1.3rem;
+           font-weight: 700;
+           position: relative;
+           padding: 0.5rem 0;
+           &::after {
+               content: '';
+               position: absolute;
+               bottom: 0;
+               left: 50%;
+               background: $txt-color;
+               width: 0;
+               transform: translateX(-50%);
+               transition: width 0.5s ease;
+               height: 0.2rem;
+               background-color: $main-color;
+           }
+
+           &.active::after,
+           &:hover::after {
+               width: 100%;
+           }
+
+        }
+        
+    }
+    &-nav> * ~ *{
+        margin-left: 2rem;
+    }
+}
