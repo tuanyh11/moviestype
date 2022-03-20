@@ -7,7 +7,7 @@ interface Props<T> {
     popular: T
 }
 
-const Movies:React.FC<Props<MoviesP>> = (props):JSX.Element => {
+const Movies:React.FC<Props<MoviesP>> = (props):JSX.Element => { 
     console.log(props.popular.name)
   return (
     <div className="movie">
